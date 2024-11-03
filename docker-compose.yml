@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  task-manager-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "8080:8080"
+    container_name: task-manager-server
+
+  task-manager-console:
+    build:
+      context: .
+      dockerfile: Dockerfile.console
+    stdin_open: true
+    tty: true
+    container_name: task-manager-console
+    depends_on:
+      - task-manager-server
+
+networks:
+  default:
+    driver: bridge
+
+

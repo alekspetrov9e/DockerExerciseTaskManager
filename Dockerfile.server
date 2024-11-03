@@ -1,0 +1,5 @@
+# Dockerfile.server
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY build/libs/TaskManager-1.0-SNAPSHOT.jar task-manager-server.jar
+ENTRYPOINT ["java", "-jar", "task-manager-server.jar"]

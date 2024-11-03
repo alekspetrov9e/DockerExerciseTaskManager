@@ -1,0 +1,5 @@
+# Dockerfile.console
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY build/libs/task-manager-console-1.0-SNAPSHOT.jar task-manager-console.jar
+ENTRYPOINT ["java", "-jar", "task-manager-console.jar"]
