@@ -23,7 +23,7 @@ Docker and Docker Compose installed.
 Clone the Repository
 bash
 Copy code
-git clone https://github.com/yourusername/TaskManager.git
+git clone https://github.com/alekspetrov9e/DockerExerciseTaskManager
 cd TaskManager
 Build the Application
 To build the application and create the necessary JAR files, run:
